@@ -377,7 +377,7 @@ public enum Router {
 //
 //     - parameter upload: an upload object
 //     **/
-    case uploadFile(upload: StravaSwift.UploadData)
+    case uploadFile(upload: StravaSwiftUpdate.UploadData)
 //
 //    /**
 //     Check upload status
