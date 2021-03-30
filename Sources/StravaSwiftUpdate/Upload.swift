@@ -72,8 +72,8 @@ public struct UploadData {
     public final class Status: Strava {
         public let id: Int?
         let externalId: String?
-        let error: String?
-        let status: String?
+        public let error: String?
+        public let status: String?
         public let activityId: Int?
 
         public required init(_ json: JSON) {
