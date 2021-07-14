@@ -412,7 +412,8 @@ extension Router: URLRequestConvertible  {
         let authParams = StravaClient.sharedInstance.authParams
             .map { "\($0.key)=\($0.value)" }
             .joined(separator:"&")
-        return URL(string: "\(baseUrl)?\(authParams)")!
+        let string = "\(baseUrl)?\(authParams)"
+        return URL(string: string.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!)!
     }
 
     /**
