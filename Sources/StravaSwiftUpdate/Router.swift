@@ -413,7 +413,7 @@ extension Router: URLRequestConvertible  {
             .map { "\($0.key)=\($0.value)" }
             .joined(separator:"&")
         let string = "\(baseUrl)?\(authParams)"
-        return URL(string: string.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!)!
+        return URL(string: string)!
     }
 
     /**
